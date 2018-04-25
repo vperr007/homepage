@@ -1,0 +1,183 @@
+<html>
+<link href='style.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+
+<link href="https://fonts.googleapis.com/css?family=Denk+One" rel="stylesheet">
+<title>Victoria Perry Portfolio -- VP Designs</title>
+<meta name='description' content="Beautiful landing pages created by VP Designs. Learn more"/>
+<link rel='Canonical' href='vpdesigns.co' />
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet"> -->
+<body>
+  <div class='div-padding'>
+<h1 class='title'>VP Designs</h1>
+<!-- <h4 class='title'>I'm Victoria</h4> -->
+
+  </div>
+  <div class='cover'>
+
+    <!-- <img class='logo' src="grey.png" /> -->
+
+
+  <!-- <h1>heyy</h1> -->
+    </div>
+
+
+<div class='about'>
+  <!-- <h1>About</h1> -->
+
+  <div class='about-container'>
+
+    <div class='box'>
+<h3>ABOUT</h3>
+<div class='about-text'> I'm Victoria.  </div>
+<!-- <div class='about-text'; id='webdev'; style='color:#069ec0'> Web Developer</div> -->
+<div class='about-text'> Web developer</div>
+<div class='about-text'> Living in Tampa</div>
+
+<div class='about-text'> Don't worry,</div>
+<div class='about-text'> I'm not a Leo.</div>
+
+<div class='about-text'> </div>
+
+    </div>
+
+</div>
+</div>
+<div class='buffer'>
+
+</div>
+
+<div class='skills'>
+  <!-- <h1>Why hire me?</h1> -->
+
+<!-- <h1>Skills</h1> -->
+<!-- <div class='box'> -->
+
+<!-- </div> -->
+
+<div class='col-2'><div class='skill-circle'>
+  <div class='skills-text'> No Ghosting</div>
+</div></div>
+<div class='col-2'><div class='skill-circle' id='working-sites'>
+  <div class='skills-text' > Working Sites</div>
+</div></div>
+<div class='col-2'><div class='skill-circle'></div></div>
+
+</div>
+<div id='green-buffer'>
+
+</div>
+<div class='portfolio'>
+  <div id='white-highlight'>
+
+  <h2>Portfolio</h2>  </div>
+
+  <!-- <hr /> -->
+  <div class='container-port'>
+
+    <div class='parent'>
+      <div class='flex-grid'>
+        <div class="col"><a href='http://www.codewithher.com/'><img src="code.jpg" onerror="this.onerror=null; this.src='/dist/images/code.jpg'" class='lazy portfolio-image img-responsive'></a></div>
+        <div class="col"><a href='http://jackscoffeeshop.com'><img src="jacker.jpg" onerror="this.onerror=null; this.src='/dist/images/jacker.jpg'" class='lazy portfolio-image img-responsive'></a></div>
+
+        <div class="col"><a href='https://vperr007.github.io/rr'><img src="random.jpg" onerror="this.onerror=null; this.src='/dist/images/random.jpg'" class='lazy portfolio-image img-responsive'></a></div>
+
+
+        <div class="col"><a href='http://zombieguide.online'><img src="run.jpg" onerror="this.onerror=null; this.src='/dist/images/run.jpg'" class='lazy portfolio-image img-responsive'></picture></a></div>
+        <div class="col"><a href='http://www.codewithher.com/'><img src="crismari.jpg" onerror="this.onerror=null; this.src='/dist/images/crismari.jpg'" class='lazy portfolio-image img-responsive'></a></div>
+        <div class="col"><a href='http://www.codewithher.com/'><img src="code.jpg" onerror="this.onerror=null; this.src='/dist/images/crismari2.jpg'" class='lazy portfolio-image img-responsive'></a></div>
+
+
+
+
+    <!-- </div> -->
+    </div>
+
+
+  </div>
+  </div>
+</div>
+<div class='whiteout'>
+  <h3>contact</h3>
+
+
+<div class='contact'>
+
+  <button id="github" name="github" value="Github" onclick="location.href='https://github.com/vperr007/'"><a href="https://github.com/vperr007/"><i class="fab fa-github"></i></a></button>
+    <button id="linkedin" name="linkedin" value="LinkedIn"><a href="#"><i class="fab fa-linkedin"></i></a></button>
+    <button id="codepen" name="codepen" value="Codepen" onclick="location.href='https://github.com/vperr007/'"><a href="#"><i class="fab fa-codepen"></i></a></button>
+    <!-- <div class="contact-info">vperdesigns@gmail.com</div> -->
+</div>
+
+
+</div>
+</div>
+
+
+
+
+<style>
+        .col {width:300px; display: inline-block; }
+        /*.item .itemtitle {font-weight:bold; font-size:2em;}*/
+        .hidden {display:none;}
+    </style>
+
+
+
+        <script type="text/javascript" src="https://js.freebusy.io/pick-a-time/v1"></script>
+
+        <script>
+        registerListener('load', setLazy);
+        registerListener('load', lazyLoad);
+        registerListener('scroll', lazyLoad);
+
+        var lazy = [];
+
+        function setLazy(){
+            lazy = document.getElementsByClassName('lazy');
+            console.log('Found ' + lazy.length + ' lazy images');
+        }
+
+        function lazyLoad(){
+            for(var i=0; i<lazy.length; i++){
+                if(isInViewport(lazy[i])){
+                    if (lazy[i].getAttribute('data-src')){
+                        lazy[i].src = lazy[i].getAttribute('data-src');
+                        lazy[i].removeAttribute('data-src');
+                    }
+                }
+            }
+
+            cleanLazy();
+        }
+
+        function cleanLazy(){
+            lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
+        }
+
+        function isInViewport(el){
+            var rect = el.getBoundingClientRect();
+
+            return (
+                rect.bottom >= 0 &&
+                rect.right >= 0 &&
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+             );
+        }
+
+        function registerListener(event, func) {
+            if (window.addEventListener) {
+                window.addEventListener(event, func)
+            } else {
+                window.attachEvent('on' + event, func)
+            }
+        }
+        </script>
+
+
+
+</body>
+</html>
