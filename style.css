@@ -9,7 +9,7 @@ body{
 
 .cover{
 /* background-image: url('pineapples-1.jpg'); */
-background-image: url(homepage/lion.gif);
+background-image: url(lion.gif);
 background-size: 100% 100%;
 background-repeat: no-repeat;
 height: 60vh;
